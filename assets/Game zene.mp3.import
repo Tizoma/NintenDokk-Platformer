@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7r78pjbcwh2g"
+path="res://.godot/imported/Game zene.mp3-32182652ef63584b0630fec02eba44f5.mp3str"
+
+[deps]
+
+source_file="res://assets/Game zene.mp3"
+dest_files=["res://.godot/imported/Game zene.mp3-32182652ef63584b0630fec02eba44f5.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
