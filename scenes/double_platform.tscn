@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlwob53t3n274"]
+
+[ext_resource type="Texture2D" uid="uid://cewg3i34brx8n" path="res://assets/duplaplatform.png" id="1_4dbkt"]
+[ext_resource type="Script" path="res://scripts/double_platform.gd" id="1_pdt31"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d452"]
+size = Vector2(64, 8)
+
+[node name="DuplaPlatform" type="AnimatableBody2D"]
+script = ExtResource("1_pdt31")
+texture = "res://assets/duplaplatform.png"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4dbkt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3d452")

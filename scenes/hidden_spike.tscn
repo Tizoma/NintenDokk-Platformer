@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://qj2bmyycmya8"]
+
+[ext_resource type="Script" path="res://scripts/hidden_spike.gd" id="1_2ebna"]
+[ext_resource type="Texture2D" uid="uid://ccnyrg22u0x6b" path="res://assets/spike.png" id="2_vi40w"]
+
+[node name="GeciSpike" type="StaticBody2D"]
+collision_mask = 2
+script = ExtResource("1_2ebna")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vi40w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(13, 8)
+polygon = PackedVector2Array(3, 8, 3, 5, 0, 0, -26, 0, -29, 5, -29, 8)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="DetectShape" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(13, 8)
+polygon = PackedVector2Array(3, 8, 3, 4, 0, -1, -26, -1, -29, 4, -29, 8)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

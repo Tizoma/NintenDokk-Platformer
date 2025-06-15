@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs5te8ko47vtv"]
+
+[ext_resource type="Texture2D" uid="uid://c85ff448tla52" path="res://assets/pipe.png" id="1_ykdcl"]
+
+[node name="Pipe" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ykdcl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-27, -17, 27, -17, 27, 1, 18, 1, 18, 48, -18, 48, -18, 1, -27, 1)

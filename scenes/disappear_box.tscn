@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4a6qlt33tplw"]
+
+[ext_resource type="Script" path="res://scripts/disappear_box.gd" id="1_0hppr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r17p"]
+size = Vector2(32, 32)
+
+[node name="DisappearKocka" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_0hppr")
+texture = "res://assets/tegla1.png"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7r17p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

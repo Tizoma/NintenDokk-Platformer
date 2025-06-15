@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfhmdsa3kq517"]
+
+[ext_resource type="AudioStream" uid="uid://c7r78pjbcwh2g" path="res://assets/Game zene.mp3" id="1_3yq21"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_3yq21")
+volume_db = -12.0
+autoplay = true
+max_distance = 10000.0

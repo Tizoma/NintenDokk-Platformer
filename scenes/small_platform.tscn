@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgjvduxgrasgj"]
+
+[ext_resource type="Texture2D" uid="uid://50mfp8131qnu" path="res://assets/smallplatform.png" id="1_bul63"]
+[ext_resource type="Script" path="res://scripts/small_platform.gd" id="1_gf0h8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgejb"]
+size = Vector2(32, 8)
+
+[node name="SmallPlatform" type="AnimatableBody2D"]
+collision_mask = 3
+script = ExtResource("1_gf0h8")
+texture = "res://assets/smallplatform.png"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bul63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xgejb")
+one_way_collision = true

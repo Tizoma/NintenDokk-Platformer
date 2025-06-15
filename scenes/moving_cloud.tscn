@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ntxxpjh0dpn"]
+
+[ext_resource type="Texture2D" uid="uid://ujxlvuqphe61" path="res://assets/felho.png" id="1_4m8po"]
+[ext_resource type="Script" path="res://scripts/moving_cloud.gd" id="2_vddui"]
+
+[node name="MozgoFelho" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_4m8po")
+script = ExtResource("2_vddui")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+scale = Vector2(4.8, 3.2)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
